@@ -1,10 +1,10 @@
 import './App.css';
-import ToDoContent from './components/To-Do-Content';
+import Content from './components/Content';
 
 function App() {
   return (
     <div className='main-content'>
-      <ToDoContent/>
+      <Content/>
     </div>
   );
 }
