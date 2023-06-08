@@ -25,7 +25,7 @@ export default function Modal(props) {
         <div className="modal-content">
           <div className="modal-header">
             <h1 className="modal-title fs-5" id="exampleModalLabel">
-              {props.type == 'edit' ? 'Edit Existing Item' : 'Add Item'}
+              {props.type === 'edit' ? 'Edit Existing Item' : 'Add Item'}
             </h1>
           </div>
           <div className="modal-body">

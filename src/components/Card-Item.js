@@ -29,7 +29,7 @@ export default function CardItem({cardType}) {
   
   function CloseCallback(content,closeStatus) {
     if(closeStatus) {
-      if(modalType == 'add') {
+      if(modalType === 'add') {
         setList([
           ...list,
           content
@@ -38,7 +38,7 @@ export default function CardItem({cardType}) {
       else {
         let myList;
         myList = list.map(item => {
-          if(item.id == content.id) {
+          if(item.id === content.id) {
             item.title = content.title;
             item.desc = content.desc;
           }
