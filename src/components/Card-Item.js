@@ -2,19 +2,22 @@ import Modal from "./Modal";
 import { useState, useEffect } from "react";
 import {v1 as uuid} from "uuid"; 
 
-export default function CardItem({cardType}) {
-  const [list,setList] = useState(JSON.parse(localStorage.getItem('toDoItems')) || []);
+export default function CardItem({sectionName}) {
+  
+  const [cardItems,setCardItems] = useState(JSON.parse(localStorage.getItem(sectionName)) || []);
+  
   const [modalStatus,setModalStatus] = useState(false);
   const [modalContent,setModalContent] = useState();
   const [modalType,setModalType] = useState('');
+
   let listItems = [];
 
   useEffect(() => {
-    localStorage.setItem('toDoItems',JSON.stringify(list));
-  }, [list]);
+    localStorage.setItem(sectionName,JSON.stringify(cardItems));
+  }, [cardItems]);
 
-  if(list != null && list.length > 0 ) {
-    listItems = list.map((card) => {
+  if(cardItems != null && cardItems.length > 0 ) {
+    listItems = cardItems.map((card) => {
       return (
         <div className="card" key={card.id}>
           <div className="card-body">
@@ -30,21 +33,17 @@ export default function CardItem({cardType}) {
   function CloseCallback(content,closeStatus) {
     if(closeStatus) {
       if(modalType === 'add') {
-        setList([
-          ...list,
-          content
-        ])
+        setCardItems([...cardItems,content]);
       }
       else {
-        let myList;
-        myList = list.map(item => {
+        let myList = cardItems.map(item => {
           if(item.id === content.id) {
             item.title = content.title;
             item.desc = content.desc;
           }
           return item;
         })
-        setList([...myList]);
+        setCardItems([...myList]);
       }
     }
     setModalContent(content);

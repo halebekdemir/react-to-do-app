@@ -7,7 +7,7 @@ export function ToDo() {
     <div className="col-4">
       <h3>To Do</h3>
       <div className="grid">
-        <CardItem cardType="toDoCard"/>
+        <CardItem sectionName="toDoItems"/>
       </div>
     </div>
   )
@@ -18,7 +18,7 @@ export function InProgress() {
     <div className="col-4">
       <h3>In Progress</h3>
       <div className="grid">
-        <CardItem cardType="inProgress"/>
+        <CardItem sectionName="inProgressItems"/>
       </div>
     </div>
   )
@@ -29,7 +29,7 @@ export function Done() {
     <div className="col-4">
       <h3>Done</h3>
       <div className="grid">
-        <CardItem cardType="done"/>
+        <CardItem sectionName="doneItems"/>
       </div>
     </div>
   )
@@ -42,8 +42,8 @@ export default function Content() {
     <div className="container">
       <div className="row">
         <ToDo />
-        {/* <InProgress />
-        <Done /> */}
+        <InProgress />
+        <Done />
       </div>
     </div>
   )
