@@ -5,7 +5,7 @@ export function ToDo() {
 
   return(
     <div className="col-4">
-      <h3>To Do</h3>
+      <h3 className="font-bagel">To Do</h3>
       <div className="grid">
         <CardItem sectionName="toDoItems"/>
       </div>
@@ -16,7 +16,7 @@ export function ToDo() {
 export function InProgress() {
   return(
     <div className="col-4">
-      <h3>In Progress</h3>
+      <h3 className="font-bagel">In Progress</h3>
       <div className="grid">
         <CardItem sectionName="inProgressItems"/>
       </div>
@@ -27,7 +27,7 @@ export function InProgress() {
 export function Done() {
   return(
     <div className="col-4">
-      <h3>Done</h3>
+      <h3 className="font-bagel">Done</h3>
       <div className="grid">
         <CardItem sectionName="doneItems"/>
       </div>
