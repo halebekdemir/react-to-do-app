@@ -13,8 +13,9 @@ export default function CardItem({sectionName}) {
   let listItems = [];
 
   useEffect(() => {
+    console.log("use effect section name",sectionName)
     localStorage.setItem(sectionName,JSON.stringify(cardItems));
-  }, [cardItems]);
+  }, [cardItems,sectionName]);
 
   if(cardItems != null && cardItems.length > 0 ) {
     listItems = cardItems.map((card) => {
