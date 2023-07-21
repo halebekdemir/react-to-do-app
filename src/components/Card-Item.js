@@ -13,7 +13,6 @@ export default function CardItem({sectionName}) {
   let listItems = [];
 
   useEffect(() => {
-    console.log("use effect section name",sectionName)
     localStorage.setItem(sectionName,JSON.stringify(cardItems));
   }, [cardItems,sectionName]);
 
