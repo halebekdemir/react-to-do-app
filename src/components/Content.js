@@ -4,9 +4,9 @@ import CardItem from "./Card-Item";
 export function ToDo() {
 
   return(
-    <div className="col-4">
-      <h3 className="font-bagel">To Do</h3>
-      <div className="grid">
+    <div className="section">
+      <h3 className="section__title">To Do</h3>
+      <div className="section__content">
         <CardItem sectionName="toDoItems"/>
       </div>
     </div>
@@ -15,9 +15,9 @@ export function ToDo() {
 
 export function InProgress() {
   return(
-    <div className="col-4">
-      <h3 className="font-bagel">In Progress</h3>
-      <div className="grid">
+    <div className="section">
+      <h3 className="section__title">In Progress</h3>
+      <div className="section__content">
         <CardItem sectionName="inProgressItems"/>
       </div>
     </div>
@@ -26,9 +26,9 @@ export function InProgress() {
 
 export function Done() {
   return(
-    <div className="col-4">
-      <h3 className="font-bagel">Done</h3>
-      <div className="grid">
+    <div className="section">
+      <h3 className="section__title">Done</h3>
+      <div className="section__content">
         <CardItem sectionName="doneItems"/>
       </div>
     </div>
@@ -39,12 +39,10 @@ export function Done() {
 export default function Content() {
 
   return(
-    <div className="container">
-      <div className="row">
-        <ToDo />
-        <InProgress />
-        <Done />
-      </div>
-    </div>
+    <>
+      <ToDo />
+      <InProgress />
+      <Done />
+    </>
   )
 }

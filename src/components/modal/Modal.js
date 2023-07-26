@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export default function Modal(props) {
-  // console.log("modal props",props)
+  console.log("props",props)
   const [modalContent,setModalContent] = useState(props.content);
 
   function handleChange(event) {
@@ -20,7 +20,7 @@ export default function Modal(props) {
   }
 
   return(
-    <div className={`modal fade ${props.showModal ? 'show' : ''}`} style={props.showModal ? {display: 'block'} : {} } id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tab-index="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div className={`modal ${props.showModal ? '-show' : ''}`} id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tab-index="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div className="modal-dialog">
         <div className="modal-content">
           <div className="modal-header">

@@ -1,0 +1,32 @@
+$color-white: #FFFFFF;
+$color-light: #FAF3F0;
+$color-green: #D4E2D4;
+$color-pink: #FFCACC;
+$color-purple: #DBC4F0;
+
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  column-gap: 2em;
+  padding: 1em;
+  height: 100%;
+  background-color: $color-light;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  &__title {
+    font-size: 26px;
+  }
+  &__content {
+    padding: 0.5em;
+    background-color: $color-white;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  }
+
+}
